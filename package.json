@@ -1,0 +1,20 @@
+{
+  "name": "wc-starter-kit",
+  "version": "0.0.1",
+  "description": "A template starter based on web component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web",
+    "component",
+    "starter",
+    "kit"
+  ],
+  "author": "Yohan Totting <tyohan@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "lit-html": "^1.0.0"
+  }
+}
