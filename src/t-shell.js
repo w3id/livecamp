@@ -14,14 +14,32 @@ export default class TShell extends HTMLElement{
         
         this.router.on('/home',async ()=>{
             
-            const module= this.importModule('/src/t-app.js');
+            const module= this.importModule('/src/routes/t-app.js');
             this.activePage=html`<t-app active="${window.location.hash}"></t-app>`;
             this.render(true);
         });
 
         this.router.on('/about',async ()=>{
-            const TSchedule= this.importModule('/src/t-about.js');
+            const TSchedule= this.importModule('/src/routes/t-about.js');
             this.activePage=html`<t-about></t-about>`;
+            this.render(true);
+        });
+
+        this.router.on('/groups',async ()=>{
+            this.importModule('/src/routes/t-groups.js');
+            this.activePage=html`<t-groups></t-groups>`;
+            this.render(true);
+        });
+
+        this.router.on('/groups/create',async ()=>{
+            this.importModule('/src/routes/t-groups-create.js');
+            this.activePage=html`<t-groups-create></t-groups-create>`;
+            this.render(true);
+        });
+
+        this.router.on('/expenses/*',async ()=>{
+            this.importModule('/src/routes/t-expenses.js');
+            this.activePage=html`<t-expenses></t-expenses>`;
             this.render(true);
         });
 

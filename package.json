@@ -15,6 +15,7 @@
   "author": "Yohan Totting <tyohan@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "idb-keyval": "^3.2.0",
     "lit-html": "^1.0.0"
   }
 }

@@ -26,7 +26,7 @@ export default class TRouter {
         for (let i = 0; i < this.routes.length; i++) {
             const route = this.routes[i];
             const cleanUrl=url.substring(0, url.indexOf('#'));                  
-            if(cleanUrl===route.pattern || url===route.pattern){
+            if(cleanUrl===route.pattern || url.match(route.pattern)){
                 this.setActiveRoute(url,route);
                 notFound=false;
                 break;

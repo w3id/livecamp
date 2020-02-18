@@ -1,5 +1,5 @@
-import {html,render} from '../node_modules/lit-html/lit-html.js';
-import TImg from './t-img.js';
+import {html,render} from '../../node_modules/lit-html/lit-html.js';
+import TImg from '../t-img.js';
 
 customElements.define('t-img', TImg);
 
