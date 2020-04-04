@@ -1,6 +1,7 @@
 
 const production = !process.env.ROLLUP_WATCH;
 import { terser } from "rollup-plugin-terser";
+
 export default {
     input: [
         'src/t-shell.js',
@@ -11,6 +12,6 @@ export default {
         format: 'esm'
     },
     plugins: [
-		production && terser() // minify, but only in production
+        production && terser(), // minify, but only in production.
 	]
   };
