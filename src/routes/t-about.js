@@ -1,4 +1,4 @@
-import {html,render} from '../node_modules/lit-html/lit-html.js';
+import {html,render} from '../../node_modules/lit-html/lit-html.js';
 export class TAbout extends HTMLElement {
     constructor(){
         super();
@@ -17,11 +17,7 @@ export class TAbout extends HTMLElement {
 
 
    
-    get template(){
-        return html`
-            <h1>About</h1>
-        `;
-    }
+   
 }
 
 customElements.define('t-about', TAbout);

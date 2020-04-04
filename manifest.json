@@ -1,8 +1,8 @@
 {
     "name": "WCStarterKit",
     "short_name": "WCStarterKit",
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#e3f0f3",
+    "background_color": "#e3f0f3",
     "display": "standalone",
     "orientation": "portrait",
     "scope": "/",

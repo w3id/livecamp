@@ -13,34 +13,10 @@ export default class TShell extends HTMLElement{
         this.router=new TRouter;
         
         this.router.on('/home',async ()=>{
-            
-            const module= this.importModule('/src/routes/t-app.js');
-            this.activePage=html`<t-app active="${window.location.hash}"></t-app>`;
-            this.render(true);
-        });
-
-        this.router.on('/about',async ()=>{
-            const TSchedule= this.importModule('/src/routes/t-about.js');
-            this.activePage=html`<t-about></t-about>`;
-            this.render(true);
-        });
-
-        this.router.on('/groups',async ()=>{
-            this.importModule('/src/routes/t-groups.js');
-            this.activePage=html`<t-groups></t-groups>`;
-            this.render(true);
-        });
-
-        this.router.on('/groups/create',async ()=>{
-            this.importModule('/src/routes/t-groups-create.js');
-            this.activePage=html`<t-groups-create></t-groups-create>`;
-            this.render(true);
-        });
-
-        this.router.on('/expenses/*',async ()=>{
-            this.importModule('/src/routes/t-expenses.js');
-            this.activePage=html`<t-expenses></t-expenses>`;
-            this.render(true);
+            import('./routes/t-home.js').then(({ THome })=> {
+                this.activePage=html`<t-home active="${window.location.hash}"></t-app>`;
+                this.render(true);
+              });
         });
 
 
@@ -54,16 +30,11 @@ export default class TShell extends HTMLElement{
                     this._shadowRoot.querySelector('#drawer').classList.toggle('active');
                 });
             });
+            const article = this._shadowRoot.querySelector('#drawer-container>article');
+            article.addEventListener('click',(e) =>{
+                this._shadowRoot.querySelector('#drawer').classList.remove('active');
+            });
         });
-    }
-
-    
-
-    importModule(url){
-        const script=document.createElement('script');
-        script.setAttribute('src',url);
-        script.setAttribute('type','module');
-        document.head.appendChild(script);
     }
 
     
@@ -87,18 +58,33 @@ export default class TShell extends HTMLElement{
             }
             a{
                 text-decoration:none;
+                color:#000;
             }
             #drawer-container{
                 position: relative;
-                height: 100vh;
                 width: 100vw;
+                display:grid;
+            }
+
+            #drawer-container>header{
+                position:fixed;
+                top:0;
+                left:0;
+                right:0;
+                z-index:100;
+                height:56px;
+                background:#e3f0f3;
+                line-height:56px;
             }
             
-            #content-container {
-                height:
+            #drawer-container>header .logo{
+                height: 40px;
+                display:inline-block;
+                vertical-align:middle;
             }
-            header{
-                padding:0 1rem;
+            #drawer-container>article{
+                grid-row-start:1;
+                grid-row-end:span 1;
             }
 
             #drawer{
@@ -112,6 +98,32 @@ export default class TShell extends HTMLElement{
                 z-index:1000;
             }
 
+            #drawer>header{
+                height:56px;
+                display:grid;
+                grid-template-columns:auto 56px;
+            }
+
+            #drawer>header>h2{
+                margin:0;
+                padding-left:16px;
+                line-height:56px;
+            }
+
+            #nav-close{
+                grid-column-start:2;
+                font-size: 24px;
+                text-decoration: none;
+                color: #999;
+                z-index:100;
+                vertical-align:middle;
+                padding:12px;
+                text-align: center;
+                background:transparent;
+                border:none;
+                text-decoration:none;
+            }
+
             #drawer ul{
                 list-style:none;
                 padding-left:1rem;
@@ -123,32 +135,47 @@ export default class TShell extends HTMLElement{
             }
 
             #drawer ul li{
-                line-height:4rem;
+                line-height:56px;
+                margin-bottom:24px;
             }
             #nav-toggle{
-                position: fixed;
-                left: 1rem;
-                top:1rem;
-                font-size: 3rem;
+                font-size: 24px;
                 text-decoration: none;
-                color: #FFF;
+                color: #C0C0C0;
                 z-index:100;
-                vertical-align:top;
-                height: 50px;
-                width: 50px;
+                vertical-align:middle;
+                padding:12px;
                 text-align: center;
-            }
-            #nav-close{
-                position: absolute;
-                right: 2rem;
-                font-size: 3rem;
-                top:1rem;
-                padding:0;
-                margin:0;
-                text-decoration:none;
+                background:transparent;
+                border:none;
             }
 
-             @media (min-width: 40.0rem) { 
+            
+
+             @media (min-width: 640px) { 
+                #drawer-container>header{
+                    position:absolute;
+                    top:16px;
+                    left:16px;
+                    width:30%;
+                    z-index:10;
+                    background:transparent;
+                }
+
+                #drawer-container>header .logo{
+                    display:inline-block;
+                }
+                #drawer-container>aside{
+                    top:16px;
+                    right:16px;
+                    width:70%;
+                    left:30%;
+                    margin:0;
+                    height:56px;
+                    background: transparent;
+                    position:absolute;
+                }
+
                 #arrow-down {
                     font-size: 8rem;
                     text-decoration: none;
@@ -160,17 +187,12 @@ export default class TShell extends HTMLElement{
                     transform: translateX(-50%);
                 }    
 
-                #drawer{
-                    width:70vw;
-                    right:2rem;
-                    top:1rem;
-                    left:30vw;
-                    height:3rem;
-                    background:transparent;
-                    position: absolute;
-                }
+                #drawer-container>aside>header{
 
-                #drawer.active{
+                }
+                
+
+                #drawer-container>aside.active{
                     left:30vw;
                     border-right: none;
                 }
@@ -179,16 +201,16 @@ export default class TShell extends HTMLElement{
                     display:flex;
                     flex-direction:row;
                     justify-content:flex-end;
-                    margin:0 4rem 0 0;
+                    margin:0;
                 }
 
                 #drawer ul li{
-                    padding:1rem 2rem 1rem 4rem;
+                    padding:0 24px;
                     text-align:right;
-                    line-height:2rem;
+                    line-height:56px;
                 }
                 #drawer ul li a{
-                    color:#FFF;
+                    color:#000;
                 }
                 #drawer header,#nav-close,#nav-toggle{
                     display:none;
@@ -197,21 +219,29 @@ export default class TShell extends HTMLElement{
 
         </style>
         <div id="drawer-container">
-                <button id="nav-toggle" class="nav-toggle">&#9776;</button>
-                <div id="drawer">
-                        <button id="nav-close" class="nav-toggle">&times;</button>
+                <header>
+                    <button id="nav-toggle" class="nav-toggle">&#9776;</button>
+                    <img class="logo" 
+                        srcset="/img/logo-light-bg@2x.png 2x,
+                                /img/logo-light-bg.png"
+                    src="/img/logo-light-bg@2x.png" alt="logo  WWWID"/>
+                </header>
+                <aside id="drawer">
                         <header>
                                 <h2>Menu</h2>
+                                <button id="nav-close" class="nav-toggle">&times;</button>
                         </header>
                         <ul id="menu">
-                            <li><a href="/home#tentang">Tentang</a></li>
-                            <li><a href="/home#venue-content">Lokasi</a></li>
-                            <li><a href="/about">About</a></li>
+                            <li><a href="/home#detail">Detail</a></li>
+                            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdqXrDFsUHJK_8pLy3o_h_jM7P3X9bTXbzGb93KufvZakPwtw/viewform"" target="_blank" rel="noopener">Submit Topik</a></li>
+                            <li><a href="https://wwwid.org/about">Organizer</a></li>
                         </ul>
-                </div>
-                <div id="content-container">
-                    ${this.activePage}
-                </div>
+                </aside>
+                <article id="content-container">
+                    <div id="active-page">
+                        ${this.activePage}
+                    </div>
+                </article>
         </div>
         `;
     }
