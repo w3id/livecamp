@@ -234,7 +234,7 @@ export default class TShell extends HTMLElement{
                         <ul id="menu">
                             <li><a href="/home#detail">Detail</a></li>
                             <li><a href="/home#speakers">Pembicara</a></li>
-                            <li><a href="https://wwwid.org/about">Organizer</a></li>
+                            <li><a href="https://wwwid.org/pages/tentang-kami/">Organizer</a></li>
                         </ul>
                 </aside>
                 <article id="content-container">
