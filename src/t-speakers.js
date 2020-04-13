@@ -64,9 +64,6 @@ export default class TSpeakers extends HTMLElement{
                 
                 grid-column: 2/span 2;
             }
-            .speaker .desc {
-                display:none;
-            }
         }
         </style>
         <h2>Pembicara</h2>
