@@ -1,0 +1,55 @@
+{
+    "speaker": [
+      {
+        "name": "Aria Rajasa",
+        "url": "https://twitter.com/rajasa",
+        "photo": "/img/speakers/aria.jpg",
+        "topic": "Tiga fase startup dan prioritas pemilihan tech stack yang sesuai",
+        "desc": "Prioritas startup pada fase MVP sangatlah berbeda dengan fase Scaling, begitu juga dengan pemilihan tech stack-nya. Aria Rajasa akan berbagi pengalamannya membangun platform web Karyakarsa dengan membahas tech stack yang dipilih, struktur biaya yang dikeluarkan dan prioritas pengembangan produk di 3 fase startup: MVP (Problem/Solution Fit), Product/Market Fit dan Scale."
+      },
+      {
+        "name": "Doni Rubiagatra",
+        "url":"https://twitter.com/rubiagatra",
+        "photo": "/img/speakers/doni.jpg",
+        "topic": "Prinsip dasar dalam membuat web visualisasi data interaktif",
+        "desc": "Membuat visualisasi data membutuhkan analisa mendalam terutama dalam menerjemahkan data menjadi visual yang bisa memberikan informasi yang dapat dipahami dengan lebih mudah. Topik ini akan memberikan gambaran bagaimana alur dan prisip dasar membuat visualisasi di web dengan menggunakan tool yang digunakan di industri. "
+        
+      },
+      {
+        "name": "Muhammad Mustadi",
+        "url": "https://twitter.com/mathdroid",
+        "photo": "/img/speakers/odi.jpg",
+        "topic": "COVID 19 API: Scraping ArcGIS untuk bersenang-senang, menambah pengetahuan, dan kemanusian",
+        "desc": "Cerita dibalik <a href='https://covid19.mathdro.id'>covid19.mathdro.id</a>, project API untuk data COVID19. Bagaimana dia berkembang dari 0 hingga 5juta permintaan perhari, dengan orang dan tools yang terlibat."
+        
+      },
+      {
+        "name": "Rahma Utami",
+        "url":"https://twitter.com/rahmaut",
+        "photo": "/img/speakers/rahma.jpg",
+        "topic": "Aksesibilitas Website: Performa, Manfaat dan Kontribusi untuk semua lapisan masyarakat",
+        "desc": "Bagaimana menerapkan prinsip & teknis digital aksesibilitas sehingga website memiliki performa baik dalam hal teknis, seo, dan bisnis, sekaligus berdampak sosial, terutama bagi 5 juta difabel di Indonesia. Pembahasan akan fokus pada dampak dan berbagai best practice untuk digital aksesibilitas, contoh web before after, serta penggunaan Google Lighthouse dan beberapa tools pendukung lainnya. Sesi ini juga menekankan bahwa developer front end adalah  'agen perubahan' terpenting untuk transformasi masyarakat. "
+      },
+      {
+        "name": "Riza Fahmi",
+        "url":"https://twitter.com/rizafahmi22",
+        "photo": "/img/speakers/riza.jpg",
+        "topic": "Menguak Misteri dibalik JavaScript Module Bundler",
+        "desc": "Saat ini module bundler sudah menjadi sebuah alat bantu 'must have' untuk mengembangkan aplikasi frontend modern. Namun tahukah kita bagaimana sebenarnya apa saja yang dilakukan oleh module bundler sehingga aplikasi JavaScript kita siap dipublikasi? Di talk ini kita akan sama-sama melihat bagaimana cara kerja module bundler sehingga ketika nantinya menggunakan salah satu module bundler entah itu webpack, rollup atau parcel, kita sudah mengetahui bagaimana cara kerjanya dibelakang layar. "
+      },
+      {
+        "name": "Satya Kresna",
+        "url":"https://twitter.com/_satyakresna",
+        "photo": "/img/speakers/kresna.jpg",
+        "topic": "Pelajaran yang didapat dari membuat starter-kit web",
+        "desc": "Saya akan berbagi pengalaman saya bagaimana cara saya membuat KISS-Kit, sebuah starter-kit untuk mengembangkan web berbasis single page application. Dengan kehadiran starter-kit ini telah memudahkan saya untuk mengembangkan proyek web personal yang sudah saya buat antara lain <a href='https://bfwiki.satyakresna.io'>BFWiki</a> dan <a href='https://wasm-summit-clone.satyakresna.io'>WASM Summit clone</a>. Starter-kit ini mengandalkan pengetahuan HTML, CSS, JavaScript (ES6, DOM manipulation, ES modules, History API untuk routing) dan Gulp sehingga tidak perlu berpatokan dengan framework seperti Angular/Vue/React."
+      },
+      {
+        "name": "Yohan Totting",
+        "url":"https://twitter.com/tyohan",
+        "photo": "/img/speakers/yohan.jpg",
+        "topic": "Bagaimana membuat aplikasi video chat dengan teknologi web",
+        "desc": "Bagaimana aplikasi video conference berbasis web seperti Google Meet, Zoom, & Jitsi Meet bekerja dibelakang layar, arsitektur seperti apa yang diterapkan untuk menangani koneksi banyak orang tapi tetap memberikan pengalaman yang baik seperti latency rendah, pengecekan bising, latar belakang virtual, dan lainnya."
+      }
+    ]
+}

@@ -1,8 +1,6 @@
 import {html,render} from '../../node_modules/lit-html/lit-html.js';
-import TImg from '../t-img.js';
-
-customElements.define('t-img', TImg);
-
+import TSpeakers from '../t-speakers.js';
+customElements.define('t-speakers',TSpeakers);
 
 export class THome extends HTMLElement {
     constructor(){
@@ -45,7 +43,7 @@ export class THome extends HTMLElement {
 
             a{
                 text-decoration:none;
-                color:#000;
+                color:#D7182A;
             }
 
             h1,h2,h3,h4,h5{
@@ -195,51 +193,13 @@ export class THome extends HTMLElement {
                     <p>Konferensi ini akan diadakan dalam format online di mana teman-teman akan melakukan tele konferensi dengan organizer dan akan disiarkan melalui channel yang akan kami umumkan ke depan.</p>
                     </article>
                     <article>
-                    <h3>Pilihan Kategori Topik</h3>
-                    <p>
-                        Berikut adalah kategori topik yang bisa kamu submit:
-                    </p>
-                    <ul>
-                        <li>
-                            <h4>Progressive Web App (PWA)</h4>
-                            <p>Bukan sekedar Add to homescreen, tapi lebih bagaimana menyelesaikan masalah yang dihadapi user dengan penggunaan API baru di web. Kombinasi UX dan teknologi web bisa menjadi materi yang baik untuk dibagikan.</p>
-                        </li>
-                        <li>
-                            <h4>Product Development</h4>
-                            <p>Bagaimana teknologi web membantu kalian mengembangkan suatu produk yang bermanfaat, bukan sekedar memilih platformnya tapi bagaimana web membantu dalam mengembangkan fitur yang dibutuhkan.</p>
-                        </li>
-                        <li>
-                            <h4>Data dan visualisasi di web</h4>
-                            <p>Data scrapping sudah menjadi hal umum, tapi apakah ada hal unik dari sekedar scrapping dalam pengolahan data? Bagaimana mengolah dan menampilkan data lebih visual dan interaktif dengan teknologi web?</p>
-                        </li>
-                        <li>
-                            <h4>Streaming & Real Time Communication</h4>
-                            <p>Di kondisi yang mengharuskan kita untuk isolasi diri saat ini, tool streaming dan komunikasi online merupakan hal yang menjadi barang wajib bagi semua lapisan masyarakat. Bagaimana sebenarnya teknologi itu bekerja di platform web? Arsitektur seperti apa yang memungkinkan kita bertatap muka dengan banyak orang sekaligus?</p>
-                        </li>
-                    </ul>
-                    <p>Kami tetap menerima topik lain di luar kategori di atas selama tetap relevan dengan teknologi web. Pilihan kategori di atas adalah referensi topik apa yang kalian bisa submit.</p>
-                    <p><a class="button" target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSdqXrDFsUHJK_8pLy3o_h_jM7P3X9bTXbzGb93KufvZakPwtw/viewform">Submit Topik</a></p>
+                    <p>Terima kasih atas waktunya bagi yang sudah mengirimkan topik untuk konferensi online ini, walaupun singkat tapi kami menerima submission yang cukup untuk menyelenggaran konferensi online ini. Bagi yang topiknya tidak diterima, kami akan mengirimkan feedback agar ke depannya bisa lebih baik.</p>
+                    <p>Kami memilih <a href="#speakers">7 pembicara</a> yang akan mengisi konferensi online ini. Jangan lupa bikin pengingat di kalender kalian agar tidak terlewat event ini dengan klik tombol di bawah.</p>
+                    <p><a class="button" target="_blank" rel="noopener" href="https://www.google.com/calendar/render?action=TEMPLATE&text=WWWID+Live+Camp&details=Konferensi+online+seputar+teknologi+web.+%0AInfo%3A+https%3A%2F%2Flivecamp.wwwid.org&location=https%3A%2F%2Flivecamp.wwwid.org&dates=20200418T030000Z%2F20200418T100000Z">Simpan di Google Calendar</a></p>
                     </article>
                 </div>
                 <div class="block-content">
-                    <article>
-                        <h3>Bagaimana kami memilih?</h3>
-                        <p>Terlepas dari penilaian umum seperti kualitas konten dan lainnya, berikut adalah sesuatu yang kami perhatikan dalam memilih topik:</p>
-                        <ul>
-                            <li>
-                                <h4>Keunikan</h4>
-                                <p>Topik yang disampaikan jarang ditemukan di internet atau event lainnya terutama untuk konten Bahasa Indonesia.</p>
-                            </li>
-                            <li>
-                                <h4>Menginspirasi</h4>
-                                <p>Informasi yang disampaikan memberikan inspirasi dan informasi bagi web developer lain untuk berkarya. Materi yang disampaikan mampu memberikan dorongan dan pengetahuan bagi developer untuk mengembangkan suatu karya baru.</p>
-                            </li>
-                            <li>
-                                <h4>Terkait Situasi COVID19</h4>
-                                <p>Tidak wajib terkait, tapi ini adalah nilai plus. Topik yang disampaikan bisa membantu teman-teman web developer lainnya di situasi pandemic COVID19 saat ini, baik dalam menciptakan solusi yang dapat membantu masyarakat luas atau membantu web developer tetap produktif.</p>
-                            </li>
-                        </ul>
-                    </article>
+                    <t-speakers id="speakers"></t-speakers>
                 </div>
                 <div id="footer" class="block-content">
                     <p>Join our <a href="https://t.me/wwwid_pwa" target="_blank" rel="noopener">group discussion</a> and read our <a href="https://wwwid.org" target="_blank" rel="noopener">blog</a></p>

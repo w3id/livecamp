@@ -58,7 +58,7 @@ export default class TShell extends HTMLElement{
             }
             a{
                 text-decoration:none;
-                color:#000;
+                color:#D7182A;
             }
             #drawer-container{
                 position: relative;
@@ -233,7 +233,7 @@ export default class TShell extends HTMLElement{
                         </header>
                         <ul id="menu">
                             <li><a href="/home#detail">Detail</a></li>
-                            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdqXrDFsUHJK_8pLy3o_h_jM7P3X9bTXbzGb93KufvZakPwtw/viewform"" target="_blank" rel="noopener">Submit Topik</a></li>
+                            <li><a href="/home#speakers">Pembicara</a></li>
                             <li><a href="https://wwwid.org/about">Organizer</a></li>
                         </ul>
                 </aside>
