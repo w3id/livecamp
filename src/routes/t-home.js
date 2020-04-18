@@ -127,6 +127,10 @@ export class THome extends HTMLElement {
             .block-content p{
                 padding-bottom:24px;
             }
+
+            #live{
+                height:240px;
+            }
             
 
             /* Larger than mobile screen */
@@ -161,8 +165,8 @@ export class THome extends HTMLElement {
                     grid-template-columns: auto auto;
                     grid-gap:1rem;
                 }
-                .block-content ul>li{
-                    
+                #live{
+                    height:540px;
                 }
             }
             
@@ -180,7 +184,7 @@ export class THome extends HTMLElement {
                     <h4>Konferensi online seharian seputar teknologi web</h4>
                     <h4>Sabtu, 18 April 2020</h4>
                     <h5>10.00 - 17.00 WIB<h5>
-                    <p><a class="button" href="/home#detail">Lihat Detail</a></p>
+                    <p><a class="button" href="/home#live">Tonton</a></p>
                     
                 </div>
             </div>
@@ -190,12 +194,9 @@ export class THome extends HTMLElement {
                     <article>
                     <p>Mengingat situasi pandemic COVID-19 yang mewajibkan kita untuk tetap tinggal di rumah, kami ingin mengisi waktu teman-teman untuk tetap produktif dan update dengan teknologi web terkini. Untuk itu kami mengundang teman-teman yang tertarik untuk berbagi apapun yang terkait dengan teknologi web, yang bisa menginspirasi teman-teman untuk membuat sebuah aplikasi berbasis web yang baik.
                     </p>
-                    <p>Konferensi ini akan diadakan dalam format online di mana teman-teman akan melakukan tele konferensi dengan organizer dan akan disiarkan melalui channel yang akan kami umumkan ke depan.</p>
                     </article>
                     <article>
-                    <p>Terima kasih atas waktunya bagi yang sudah mengirimkan topik untuk konferensi online ini, walaupun singkat tapi kami menerima submission yang cukup untuk menyelenggaran konferensi online ini. Bagi yang topiknya tidak diterima, kami akan mengirimkan feedback agar ke depannya bisa lebih baik.</p>
-                    <p>Kami memilih <a href="#speakers">7 pembicara</a> yang akan mengisi konferensi online ini. Jangan lupa bikin pengingat di kalender kalian agar tidak terlewat event ini dengan klik tombol di bawah.</p>
-                    <p><a class="button" target="_blank" rel="noopener" href="https://www.google.com/calendar/render?action=TEMPLATE&text=WWWID+Live+Camp&details=Konferensi+online+seputar+teknologi+web.+%0AInfo%3A+https%3A%2F%2Flivecamp.wwwid.org&location=https%3A%2F%2Flivecamp.wwwid.org&dates=20200418T030000Z%2F20200418T100000Z">Simpan di Google Calendar</a></p>
+                        <iframe id="live" width="100%" src="https://www.youtube-nocookie.com/embed/qjDfuHx9iNk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </article>
                 </div>
                 <div class="block-content">

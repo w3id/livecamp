@@ -1,0 +1,39 @@
+{
+    "jadwal" : [
+        {
+            "start" :"10:00 WIB",
+            "speaker" :"Aria Rajasa",
+            "topic": "Tiga fase startup dan prioritas pemilihan tech stack yang sesuai"
+        },
+        {
+            "start" :"10:55 WIB",
+            "speaker" :"Riza Fahmi",
+            "topic": "Menguak Misteri dibalik JavaScript Module Bundler"
+        },
+        {
+            "start" :"12:45 WIB",
+            "speaker" :"Satya Kresna",
+            "topic": "Pelajaran yang didapat dari membuat starter-kit web"
+        },
+        {
+            "start" :"13:35 WIB",
+            "speaker" :"Doni Rubiagatra",
+            "topic": "Prinsip dasar dalam membuat web visualisasi data interaktif"
+        },
+        {
+            "start" :"14:25 WIB",
+            "speaker" :"Muhammad Mustadi",
+            "topic": "COVID 19 API: Scraping ArcGIS untuk bersenang-senang, menambah pengetahuan, dan kemanusian"
+        },
+        {
+            "start" :"16:15 WIB",
+            "speaker" :"Rahma Utama",
+            "topic": "Aksesibilitas Website - Performa, Manfaat dan Kontribusi untuk semua lapisan masyarakat"
+        },
+        {
+            "start" :"17:05 WIB",
+            "speaker" :"Yohan Totting",
+            "topic": "Bagaimana membuat aplikasi video chat dengan teknologi web"
+        }
+    ]
+}

@@ -19,6 +19,12 @@ export default class TShell extends HTMLElement{
               });
         });
 
+        this.router.on('/jadwal',async ()=>{
+            import('./routes/t-schedule.js').then(({ TSchedule })=> {
+                this.activePage=html`<t-schedule></t-schedule>`;
+                this.render(true);
+              });
+        });
 
         if(this.router.activeRoute===null){
             this.router.goTo('/home');
@@ -232,7 +238,9 @@ export default class TShell extends HTMLElement{
                                 <button id="nav-close" class="nav-toggle">&times;</button>
                         </header>
                         <ul id="menu">
+                            <li><a href="/home">Depan</a></li>
                             <li><a href="/home#detail">Detail</a></li>
+                            <li><a href="/jadwal">Jadwal</a></li>
                             <li><a href="/home#speakers">Pembicara</a></li>
                             <li><a href="https://wwwid.org/pages/tentang-kami/">Organizer</a></li>
                         </ul>

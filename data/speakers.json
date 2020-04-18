@@ -20,7 +20,7 @@
         "url": "https://twitter.com/mathdroid",
         "photo": "/img/speakers/odi.jpg",
         "topic": "COVID 19 API: Scraping ArcGIS untuk bersenang-senang, menambah pengetahuan, dan kemanusian",
-        "desc": "Cerita dibalik <a href='https://covid19.mathdro.id'>covid19.mathdro.id</a>, project API untuk data COVID19. Bagaimana dia berkembang dari 0 hingga 5juta permintaan perhari, dengan orang dan tools yang terlibat."
+        "desc": "Cerita dibalik <a href='https://covid19.mathdro.id'>covid19.mathdro.id</a>, sebuah project API terbuka untuk data COVID19 yang mumudahkan para pengembang aplikasi membuat aplikasi atau visualisasi untuk masyarakat umum. Topik ini akan membahas bagaimana API in berkembang dari 0 hingga mencapai 5 juta permintaan API perhari. Bagaimana prosesnya, siapa saja yang terlibat, dan tool apa yang digunakan bisa kalian lihat di topik ini."
         
       },
       {
